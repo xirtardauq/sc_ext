@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:8.2.1-alpine
+    command: sh -c "npm install && npm install gulp -g && tail -F anything"
+    working_dir: /app
+    volumes:
+      - ./:/app
